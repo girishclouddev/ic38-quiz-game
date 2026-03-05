@@ -67,9 +67,8 @@ function TipsModal({ open, onClose, theme }) {
             <button
               type="button"
               onClick={onClose}
-              className={`w-full min-h-12 py-3 rounded-xl bg-gradient-to-r ${
-                theme?.primaryGradient || "from-cyan-400 to-indigo-500"
-              } text-slate-900 font-semibold shadow-xl transition active:scale-[0.99]`}
+              className={`w-full min-h-12 py-3 rounded-xl bg-gradient-to-r ${theme?.primaryGradient || "from-cyan-400 to-indigo-500"
+                } text-slate-900 font-semibold shadow-xl transition active:scale-[0.99]`}
             >
               Let’s Practice
             </button>
@@ -96,9 +95,8 @@ export default function NavBar({
         <div className="h-14 max-w-md md:max-w-lg mx-auto px-4 flex items-center justify-between">
           <div className="min-w-0 flex items-center gap-3">
             <div
-              className={`hidden sm:flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br ${
-                theme?.primaryGradient || "from-cyan-400 to-indigo-500"
-              } text-slate-900 text-lg font-bold shadow-md motion-safe:animate-float`}
+              className={`hidden sm:flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br ${theme?.primaryGradient || "from-cyan-400 to-indigo-500"
+                } text-slate-900 text-lg font-bold shadow-md motion-safe:animate-float`}
               aria-hidden="true"
             >
               🎯
@@ -108,10 +106,16 @@ export default function NavBar({
               <div className="text-xs text-slate-300 truncate">
                 {subtitle} {totalLevels ? `• Level ${level}/${totalLevels}` : ""}
               </div>
+                {/* line 2: your name */}
+  <div className="text-[10px] text-slate-400">
+    <span className="font-medium">Designed & built by Girish Jadav</span>
+  </div>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
+          
+
             <button
               type="button"
               onClick={onStartTest}
@@ -126,6 +130,7 @@ export default function NavBar({
             >
               Tips
             </button>
+
           </div>
         </div>
       </header>
